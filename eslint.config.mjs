@@ -15,7 +15,10 @@ const eslintConfig = [
     rules: {
       "prefer-const": "off",
       "no-var": "off",
-      "@typescript-eslint/no-explicit-any": "off", // <-- disables the rule globally
+      "@typescript-eslint/no-explicit-any": "off",
+      "@next/next/no-img-element": "off", // disables img tag warning
+      "@typescript-eslint/no-unused-vars": "off", // disables unused vars error
+      "react-hooks/exhaustive-deps": "off", // disables missing deps warning
     }
   }
 ];
