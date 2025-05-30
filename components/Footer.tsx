@@ -1,4 +1,4 @@
-import { footer } from 'motion/react-client'
+
 import React from 'react'
 import MagicButton from './ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa6'
