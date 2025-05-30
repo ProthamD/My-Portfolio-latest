@@ -51,7 +51,7 @@ export const gridItems = [
     imgClassName: "relative z-100",
     titleClassName: "justify-start",
     img: "./Ami.jpg",
-    spareImg: "/b4.svg",
+    spareImg: "./b4.svg",
   },
 
   {
@@ -62,7 +62,7 @@ export const gridItems = [
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "./b5.svg",
-    spareImg: "/grid.svg",
+    spareImg: "./grid.svg",
   },
   {
     id: 6,
