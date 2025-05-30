@@ -201,13 +201,16 @@ export const socialMedia = [
   {
     id: 1,
     img: "./git.svg",
+    link: "https://github.com/ProthamD"
   },
   {
     id: 2,
     img: "./twit.svg",
+    link: "https://x.com/dey_protham"
   },
   {
     id: 3,
     img: "./link.svg",
+    link: "http://linkedin.com/in/pratham-dey-32a356239"
   },
 ];
