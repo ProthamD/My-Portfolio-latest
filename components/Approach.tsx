@@ -3,7 +3,6 @@ import React from "react";
 
 import { AnimatePresence, motion } from "motion/react";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
-import { div } from "motion/react-client";
 
 const Approach = () => {
 
@@ -14,9 +13,10 @@ const Approach = () => {
                 <span className="text-blue-500"> Approaches</span>
             </h1>
             <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4">
-                <Card title="Understading & Planning" 
-                icon={<AceternityIcon order='Phase 1' />}
-                description="We'll collaborate to map out your website's goals, target audience, 
+                <Card
+                    title="Understading & Planning"
+                    icon={<AceternityIcon order="Phase 1" />}
+                    description="We'll collaborate to map out your website's goals, target audience, 
           and key functionalities. We'll discuss things like site structure, 
           navigation, and content requirements."
                 >
@@ -25,8 +25,10 @@ const Approach = () => {
                         containerClassName="bg-emerald-900"
                     />
                 </Card>
-                <Card title="Development & Progress Update" icon={<AceternityIcon order="Phase 2"/>}
-                  description="Once we agree on the plan, I cue my lofi playlist and dive into
+                <Card
+                    title="Development & Progress Update"
+                    icon={<AceternityIcon order="Phase 2" />}
+                    description="Once we agree on the plan, I cue my lofi playlist and dive into
           coding. From initial sketches to polished code, I keep you updated
           every step of the way."
                 >
@@ -39,11 +41,11 @@ const Approach = () => {
                         ]}
                         dotSize={2}
                     />
-                    {/* Radial gradient for the cute fade */}
-                 
                 </Card>
-                <Card title="Development & Launch" icon={<AceternityIcon order="Phase 3" />}
-                description="This is where the magic happens! Based on the approved design, 
+                <Card
+                    title="Development & Launch"
+                    icon={<AceternityIcon order="Phase 3" />}
+                    description="This is where the magic happens! Based on the approved design, 
           I'll translate everything into functional code, building your website
           from the ground up"
                 >
@@ -58,16 +60,18 @@ const Approach = () => {
     );
 }
 
-const Card = ({
-    title,
-    icon,
-    children,
-    description
-}: {
+type CardProps = {
     title: string;
     icon: React.ReactNode;
     children?: React.ReactNode;
     description: string;
+};
+
+const Card: React.FC<CardProps> = ({
+    title,
+    icon,
+    children,
+    description,
 }) => {
     const [hovered, setHovered] = React.useState(false);
     return (
@@ -100,9 +104,9 @@ const Card = ({
                 <h2 className="dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center text-3xl">
                     {title}
                 </h2>
-                     <h2 className= "text-sm dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center" style={{
-                        color: '#e4ecff'
-                     }}>
+                <h2 className="text-sm dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center" style={{
+                    color: '#e4ecff'
+                }}>
                     {description}
                 </h2>
             </div>
@@ -110,7 +114,7 @@ const Card = ({
     );
 };
 
-const AceternityIcon = ({ order }: { order: string }) => {
+const AceternityIcon: React.FC<{ order: string }> = ({ order }) => {
     return (
         <div>
             <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
@@ -123,13 +127,13 @@ const AceternityIcon = ({ order }: { order: string }) => {
     );
 };
 
-export const Icon = ({ className, ...rest }: any) => {
+export const Icon: React.FC<React.SVGProps<SVGSVGElement>> = ({ className, ...rest }) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            strokeWidth="1.5"
+            strokeWidth={1.5}
             stroke="currentColor"
             className={className}
             {...rest}
