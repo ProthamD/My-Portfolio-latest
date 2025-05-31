@@ -83,7 +83,7 @@ export const projects = [
     des: "A C++ Sudoku solver and generator with backtracking and puzzle difficulty levels.",
     img: "./Sudoku-2.png",
     iconLists: ["./re.svg", "./tail.svg", "./ts.svg", "./three.svg", "./fm.svg"],
-    link: "https://github.com/ProthamD/Sudoku",
+    link: "https://prothamd.github.io/sudoku-slayer/",
   },
   {
     id: 2,
